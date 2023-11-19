@@ -11,8 +11,22 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <header>
+      <h1>多摩メダルアプリ</h1>
+      <ul>
+        <li id=<%= request.fullpath == "/medals" ? "active" : "inactive" %>>
+          <%= link_to "ホーム", "/medals" %>
+        </li>
+        <li id=<%= request.fullpath != "/medals" ? "active" : "inactive" %>>
+          <%= link_to "Myメダル", "/medals/show" %>
+        </li>
+      </ul>
+    </header>
+
+    <%= yield %>
+
+    <footer></footer>
+    <script>
+    </script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<div class="index">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="min-w-full contents-box">
+    <h2>NFT情報</h2>
+    <p>コントラクト名: <%= @name %></p>
+    <p>シンボル: <%= @symbol %></p>
+  </div>
+
+  <div class="contents-box app-discript">
+    <h2>多摩メダルアプリとは？</h2>
+    <p>NFT</p>
+    <p>スマートコントラクト</p>
+    <p>認可制御</p>
+    <p>ゼロ知識証明</p>
+  </div>
+
+  <div class="contents-box news">
+    <h2>お知らせ</h2>
+    <p>メダル交換のリクエストが来ています</p>
+    <p>アップデートv0.2.1</p>
+  </div>
+</div>

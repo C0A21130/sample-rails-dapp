@@ -1,0 +1,19 @@
+<div class="contents-boxs">
+<% @medals.each do |medal| %>
+  <div class="contents-box">
+    <h2>メダル<%= medal[:tokenId] %></h2>
+    <div class="medal">
+      <div class="medal-mold">
+      <img alt="medal-img" class="medal-img" src=<%= medal[:image] %>>
+      </div>
+    </div>
+    <div class="medal-descript">
+      <p>発行者：<%= medal[:minter_name] %></p>
+      <p>発行者アドレス：<%= medal[:minter_address] %><p>
+      <button>
+        <%= link_to "交換する", "/medals/exchanged?id=#{medal[:tokenId]}" %>
+      </button>
+    </div>
+  </div>
+<% end %>
+</div>
